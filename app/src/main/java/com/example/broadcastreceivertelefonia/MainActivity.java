@@ -1,7 +1,9 @@
 package com.example.broadcastreceivertelefonia;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -39,6 +41,12 @@ public class MainActivity extends AppCompatActivity {
             myEdit.apply();
             txtDefinido.setText(num);
         });
+
+
+
+        ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.SEND_SMS},1);
+
+
     }
 
 
